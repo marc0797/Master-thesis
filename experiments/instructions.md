@@ -68,7 +68,7 @@ very strict conditions:
 
 1. The starting temperature $T_0$ should be very large compared to the characteristic energy of the system,
 and should be decreased infinitessimally at each iteration, for infinitely many iterations.
-2. In between temperature modifications, we must let the system thermalize for $N_{\text{thermalization}\to\infty}$.
+2. In between temperature modifications, we must let the system thermalize for $N_{\text{thermalization}}\to\infty$.
 
 Since we cannot run this algorithm for an infinite amount of time, in `Ising 1D with Simulated Annnealing.ipynb`
 we explore the results of limiting the simulated annealing scheme to a certain number of iterations,
