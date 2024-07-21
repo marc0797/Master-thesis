@@ -2,6 +2,11 @@
 
 To reproduce the experiments in this folder, please follow the steps below:
 
+## Python files
+
+The python files in the library contain some useful functions used later in the
+notebooks. This is done in order to have "cleaner" notebooks.
+
 ## Matlab Notebooks
 
 1. Open the `Matlab Notebooks` folder.
@@ -54,3 +59,38 @@ defining the exploration region and $P$ the total number of parameters $P = N + 
 This folder contains the notebooks used to generate the figures in the thesis report.
 The simulations in these files can be very slow to finish, and should be done multiple times, 
 averaging the results to avoid statistical errors in the results.
+
+### Simulated Annealing
+
+With simulated annealing, we should be able to find the optimal set of parameters that minimizes the
+energy of the variational wavefunction. This global convergence, however, is only ensured under some
+very strict conditions:
+
+1. The starting temperature $T_0$ should be very large compared to the characteristic energy of the system,
+and should be decreased infinitessimally at each iteration, for infinitely many iterations.
+2. In between temperature modifications, we must let the system thermalize for $N_{\text{thermalization}\to\infty}$.
+
+Since we cannot run this algorithm for an infinite amount of time, in `Ising 1D with Simulated Annnealing.ipynb`
+we explore the results of limiting the simulated annealing scheme to a certain number of iterations,
+$\gamma$ factors, etc. For some given problem parameters.
+
+### Stochastic Reconfiguration
+
+Stochastic reconfiguration (SR) is a modified version of *gradient descent*, commonly seen in machine learning
+problems, that is specifically used for optimizing the parameters in a variational monte carlo problem.
+
+The first notebook that you should see is `Ising 1D with Stochastic Reconfiguration.ipynb`, in which the
+basic idea of the method is explained, and a simple example is done for $N$ = 4 spins. 
+
+(*Optional*) There is a statistical analysis of the autocorrelation time of the Markov chain used in the
+Monte Carlo sampling scheme of the method. If you want to try it yourself, in Jupyter notebook, set the
+corresponding cells to `code` type and run them for different values and problem sizes, try to find what
+should be the value of the `block_size` used in SR.
+
+The second and third notebooks (`Ising 1D with SR - N plots.ipynb` and `Ising 1D with SR - B field plots.ipynb`) 
+are used to plot the relative error of the method compared to the analytical results
+of the problem and the magnetizations of the obtained RBM state, respectively.
+
+**Usage:** Set the path to save the .txt files and the figures. These notebooks should be run multiple times
+to obtain results without statistical errors. Ideally, they can also can be written in a python `.py` file
+in order to run it in a HPC cluster, with a queue system.
