@@ -9,7 +9,7 @@ notebooks. This is done in order to have "cleaner" notebooks.
 
 ## Matlab Notebooks
 
-1. Open the `Matlab Notebooks` folder.
+1. Open the `matlab-notebooks` folder.
 2. Ensure that you have MATLAB installed on your system.
 3. Run the MATLAB notebooks in the specified order, as mentioned in the experiment documentation.
 4. Make sure to provide the required input data or modify the notebook parameters as needed.
@@ -49,9 +49,9 @@ defining the exploration region and $P$ the total number of parameters $P = N + 
 
 ## Jupyter Notebooks
 
-1. Open the `Jupyter Notebooks` folder.
+1. Open the `jupyter-notebooks` folder.
 2. Ensure that you have Jupyter Notebook installed on your system.
-3. Launch Jupyter Notebook and navigate to the `Jupyter Notebooks` folder.
+3. Launch Jupyter Notebook and navigate to the `jupyter-notebooks` folder.
 4. Run the Jupyter notebooks in the specified order, as mentioned in the experiment documentation.
 5. Make sure to provide the required input data or modify the notebook parameters as needed.
 6. Save the results and any generated output files in the appropriate location.
