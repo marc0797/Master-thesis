@@ -34,7 +34,7 @@ To use this file:
     - Magnetic field intensity `B`.
 - **Define divide and conquer parameters**:
     - Initial length of square side `length`.
-    - *Optional* Define the polynomial region for the exploration with `coords`.
+    - *(Optional)* Define the polynomial region for the exploration with `coords`.
     - Depth of the exploration `n_steps`.
 
 This exploration scheme works well for small systems. Nevertheless, the complexity of the energy landscape
